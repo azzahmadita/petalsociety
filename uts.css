@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  color: #555;
+  background: #ffffff;
+}
+
+a { color: #C2527F; }
+h1, h2, h3 { color: #555; }
+
+header {
+  background: #FFF8E7;
+  padding: 4px 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+.menu a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+.menu a:hover, .menu a.aktif { color: #C2527F; }
+
+.judul {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+  letter-spacing: 12px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+}
+
+.dropdown { position: relative; }
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  background: #FFF8E7;
+  border: 1px solid #F4A6C0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+.submenu a {
+  display: block;
+  padding: 10px 14px;
+  letter-spacing: 1px;
+  text-transform: none;
+  font-size: 15px;
+}
+.dropdown:hover .submenu { display: block; }
+
+
+.berjalan {
+  background: #F4A6C0;
+  color: #fff;
+  padding: 6px 0;
+}
+
+.hero {
+  background-color: #F4A6C0;
+  background-image: url("images/texture.jpg"); 
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px 20px;
+  min-height: 460px;
+}
+.hero h1 {
+  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: #666;
+}
+.hero p { font-weight: 700; margin: 0 0 20px; }
+
+
+.komposisi {
+  position: relative;
+  width: 480px;
+  max-width: 100%;
+  aspect-ratio: 10 / 11;
+}
+.komposisi img { position: absolute; height: auto; }
+.mawar     { width: 70%; right: 15%; top: 2%;  z-index: 1; rotate: 40deg; }
+.matahari  { width: 60%; right: 45%;  top: -8%; z-index: 2; rotate: -20deg; }
+.kucing    { width: 55%; left: 20%; bottom: 12%; z-index: 3; }
+
+.tombol {
+  display: inline-block;
+  background: #FFF8E7;
+  color: #555;
+  font: 700 18px 'Lora', serif;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hero .tombol { font-size: 30px; padding: 14px 40px; }
+.tombol.kecil { font-size: 14px; padding: 5px 16px; background: #F4A6C0; }
+
+.isi {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 24px;
+}
+main { flex: 1; }
+aside { width: 280px; }
+
+.widget {
+  background: #FFF8E7;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-top: 4px solid #F4A6C0;
+}
+.widget h3 { margin-top: 0; }
+.widget ul { padding-left: 18px; }
+.jam { font-size: 28px; font-weight: 700; margin: 0; }
+
+.artikel {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #F4A6C0;
+}
+.artikel img { width: 90px; height: 90px; object-fit: contain; background: #FCE4EE; }
+.artikel h3 { margin: 0 0 4px; }
+
+.galeri { display: flex; flex-wrap: wrap; gap: 14px; }
+.foto { width: 170px; text-align: center; }
+.foto img { width: 100%; height: 140px; object-fit: contain; background: #FCE4EE; }
+
+table { border-collapse: collapse; }
+th, td { border: 1px solid #F4A6C0; padding: 6px 14px; text-align: left; }
+th { background: #FFF8E7; }
+
+form input[type=text], form input[type=email], form input[type=tel],
+form input[type=date], form select, form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #F4A6C0;
+  font: inherit;
+}
+.salah { border: 2px solid red !important; }
+
+
+footer {
+  background: #F4A6C0;
+  text-align: center;
+  padding: 16px;
+  color: #fff;
+}
+footer p { margin: 4px 0; }
+footer a { color: #fff; }
+
+/* ===== HP ===== */
+@media (max-width: 800px) {
+  nav { flex-wrap: wrap; justify-content: center; }
+  .judul { order: -1; width: 100%; margin-bottom: 10px; }
+  .menu { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .isi { flex-direction: column; }
+  aside { width: auto; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero h1 { font-size: 56px; }
+}
