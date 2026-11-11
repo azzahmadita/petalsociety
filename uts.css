@@ -1,11 +1,10 @@
 body {
   margin: 0;
   font-family: 'Lora', serif;
-  color: #555;
-  background: #ffffff;
+  background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(255, 248, 231, 1) 100%);
 }
-
-a { color: #C2527F; }
+a { color: #EEAECA; }
 h1, h2, h3 { color: #555; }
 
 header {
@@ -35,7 +34,7 @@ nav {
   color: #555;
   font-size: 14px;
 }
-.menu a:hover, .menu a.aktif { color: #C2527F; }
+.menu a:hover, .menu a.aktif { color: #EEAECA; }
 
 .judul {
   font-family: 'Oswald', sans-serif;
@@ -79,8 +78,8 @@ nav {
 }
 
 .hero {
-  background-color: #F4A6C0;
-  background-image: url("images/texture.jpg"); 
+  background-color: #F4A6C0; 
+  display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 20px;
@@ -105,9 +104,9 @@ nav {
   aspect-ratio: 10 / 11;
 }
 .komposisi img { position: absolute; height: auto; }
-.mawar     { width: 70%; right: 15%; top: 2%;  z-index: 1; rotate: 40deg; }
-.matahari  { width: 60%; right: 45%;  top: -8%; z-index: 2; rotate: -20deg; }
-.kucing    { width: 55%; left: 20%; bottom: 12%; z-index: 3; }
+.bunga1     { width: 70%; right: 10%; top: 2%;  z-index: 1; rotate: 40deg; }
+.bunga2 { width: 60%; right: 45%;  top: -8%; z-index: 2; rotate: -20deg; }
+.meng    { width: 55%; left: 20%; bottom: 12%; z-index: 3; }
 
 .tombol {
   display: inline-block;
@@ -180,7 +179,6 @@ footer {
 footer p { margin: 4px 0; }
 footer a { color: #fff; }
 
-/* ===== HP ===== */
 @media (max-width: 800px) {
   nav { flex-wrap: wrap; justify-content: center; }
   .judul { order: -1; width: 100%; margin-bottom: 10px; }
